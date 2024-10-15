@@ -1,0 +1,15 @@
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/api/ApiException.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/api/ApiResponseMessage.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/api/ApiOriginFilter.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/api/GetStepApi.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/JsonApiBodyResponseSuccess.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/SwaggerSpringBootApplication.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/ErrorDetail.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/JsonApiBodyRequest.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/Header.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/GetEnigmaRequest.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/JsonApiBodyResponseErrors.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/model/GetEnigmaStepResponse.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/api/NotFoundException.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/config/SwaggerDocumentationConfig.java
+/home/sam/intellij-workspace/webflux-orchestration/ResolveEnigmaApiTres/src/main/java/co/com/samuel_falla/microservice/resolveEnigmaApi/api/GetStepApiController.java

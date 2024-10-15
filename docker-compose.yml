@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  config-server:
+    image: config-server:latest
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    environment:
+      - GIT_URI=https://github.com/NotSamfa/service-configuration
+      - SPRING_CLOUD_CONFIG_SERVER_GIT_CLONE_ON_START=true 
+    networks:
+      - orchestration-network
+
+  step-one:
+    image: step-one:latest
+    container_name: step-one
+    ports:
+      - "8081:8081"
+    depends_on:
+      - config-server
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - SPRING_APP_NAME=resolve-enigma-api-uno
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - orchestration-network
+    
+  step-two:
+    image: step-two:latest
+    container_name: step-two
+    ports:
+      - "8082:8082"
+    depends_on:
+      - config-server
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - SPRING_APP_NAME=resolve-enigma-api-dos
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - orchestration-network
+  
+  step-three:
+    image: step-three:latest
+    container_name: step-three
+    ports:
+      - "8083:8083"
+    depends_on:
+      - config-server
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - SPRING_APP_NAME=resolve-enigma-api-tres
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - orchestration-network
+
+  web-hook-orchestration:
+    image: web-hook-orchestration:latest
+    container_name: web-hook-orchestration
+    ports:
+      - "8086:8086"
+    depends_on:
+      - config-server
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - SPRING_APP_NAME=webhookorch
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - orchestration-network
+
+  web-flux-orchestration:
+    image: web-flux-orchestration:latest
+    container_name: web-flux-orchestration
+    ports:
+      - "8080:8080"
+    depends_on:
+      - config-server
+      - step-one
+      - step-two
+      - step-three
+      - web-hook-orchestration
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - SPRING_APP_NAME=webfluxorch
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - orchestration-network
+
+  batch-orchestration:
+    image: batch-orchestration:latest
+    container_name: batch-orchestration
+    ports:
+      - "8084:8084"
+    depends_on:
+      - config-server
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+      - SPRING_APP_NAME=batchOrches
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - orchestration-network
+      
+networks:
+  orchestration-network:
+    driver: bridge
+

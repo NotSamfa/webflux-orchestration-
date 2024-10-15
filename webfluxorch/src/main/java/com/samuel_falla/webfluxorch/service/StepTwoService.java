@@ -24,7 +24,7 @@ public class StepTwoService {
     private final Retry retry;
 
     public StepTwoService(CircuitBreakerRegistry circuitBreakerRegistry, RetryRegistry retryRegistry) {
-        this.webClient = WebClient.builder().baseUrl("http://localhost:8082").build();
+        this.webClient = WebClient.builder().baseUrl("http://step-two:8082").build();
         this.circuitBreaker = circuitBreakerRegistry.circuitBreaker("two");
         this.retry = retryRegistry.retry("two");
 

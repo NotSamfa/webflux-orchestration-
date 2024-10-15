@@ -1,0 +1,15 @@
+co/com/samuel_falla/microservice/resolveEnigmaApi/SwaggerSpringBootApplication.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/api/ApiOriginFilter.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/JsonApiBodyResponseErrors.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/GetEnigmaRequest.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/api/GetStepApiController.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/Header.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/GetEnigmaStepResponse.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/JsonApiBodyRequest.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/api/ApiException.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/ErrorDetail.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/config/SwaggerDocumentationConfig.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/api/NotFoundException.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/api/ApiResponseMessage.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/api/GetStepApi.class
+co/com/samuel_falla/microservice/resolveEnigmaApi/model/JsonApiBodyResponseSuccess.class

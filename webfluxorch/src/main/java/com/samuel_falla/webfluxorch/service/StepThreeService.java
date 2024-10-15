@@ -24,7 +24,7 @@ public class StepThreeService {
     private final Retry retry;
 
     public StepThreeService(CircuitBreakerRegistry circuitBreakerRegistry, RetryRegistry retryRegistry) {
-        this.webClient = WebClient.builder().baseUrl("http://localhost:8083").build();
+        this.webClient = WebClient.builder().baseUrl("http://step-three:8083").build();
         this.circuitBreaker = circuitBreakerRegistry.circuitBreaker("three");
         this.retry = retryRegistry.retry("three");
 

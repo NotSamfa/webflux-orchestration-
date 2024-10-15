@@ -46,7 +46,7 @@ public class ScheduledOrchestratorService {
 
             HttpEntity<Map<String, Object>> request = new HttpEntity<>(requestBody, headers);
 
-            String response = restTemplate.postForObject("http://localhost:8080/api/steps/orchestration", request, String.class);
+            String response = restTemplate.postForObject("http://web-flux-orchestration:8080/api/steps/orchestration", request, String.class);
             System.out.println("Response from orchestrator: " + response);
         } catch (Exception e) {
             System.err.println("Error calling orchestrator: " + e.getMessage());

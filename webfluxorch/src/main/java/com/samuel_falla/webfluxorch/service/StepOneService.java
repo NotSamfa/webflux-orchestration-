@@ -26,7 +26,7 @@ public class StepOneService {
     private final Retry retry;
 
     public StepOneService(CircuitBreakerRegistry circuitBreakerRegistry, RetryRegistry retryRegistry) {
-        this.webClient = WebClient.builder().baseUrl("http://localhost:8081").build();
+        this.webClient = WebClient.builder().baseUrl("http://step-one:8081").build();
         this.circuitBreaker = circuitBreakerRegistry.circuitBreaker("one");
         this.retry = retryRegistry.retry("one");
 

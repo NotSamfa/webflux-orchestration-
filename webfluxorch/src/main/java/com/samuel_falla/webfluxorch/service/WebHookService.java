@@ -11,7 +11,7 @@ public class WebHookService {
     private final WebClient webClient;
 
     public WebHookService() {
-        this.webClient = WebClient.builder().baseUrl("http://localhost:8086").build();
+        this.webClient = WebClient.builder().baseUrl("http://web-hook-orchestration:8086").build();
     }
 
     public Mono<String> notifyHook() {
